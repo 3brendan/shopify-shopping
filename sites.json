@@ -1,0 +1,37 @@
+{
+    "websites":
+    [
+        { 
+            "name": "Kith", 
+            "website": "https://kith.com"
+        },
+        { 
+            "name": "Concepts", 
+            "website": "https://cncpts.com"
+        },
+        { 
+            "name": "Undefeated", 
+            "website": "https://undefeated.com"
+        },
+        { 
+            "name": "Shop Nice Kicks", 
+            "website": "https://shopnicekicks.com"
+        },
+        { 
+            "name": "Bodega", 
+            "website": "https://bdgastore.com"
+        },
+        { 
+            "name": "DSMNY", 
+            "website": "https://shop-us.doverstreetmarket.com"
+        },
+        { 
+            "name": "Atmos USA", 
+            "website": "https://www.atmosusa.com"
+        },
+        { 
+            "name": "Shoe Palace", 
+            "website": "https://www.shoepalace.com"
+        }
+    ]
+}
