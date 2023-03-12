@@ -1,14 +1,11 @@
-const { Client, IntentsBitField, messageLink, EmbedBuilder } = require('discord.js');
+const { Client, IntentsBitField, messageLink, EmbedBuilder, Attachment } = require('discord.js');
 const fetch = require('node-fetch')
 const fs = require('fs');
+const { channel } = require('diagnostics_channel');
 require('dotenv').config();
 
 var sitelist = fs.readFileSync('/Users/brendan/Desktop/shopify-shopping/sites.json');
 const data = JSON.parse(sitelist);
-
-var user_keywords = ['jacques', 'CHUCK','cement'];
-var foundItems = [];
-const filtered_keywords = user_keywords.map(keyword => keyword.toLowerCase());
 
 const client = new Client({
     intents: [
@@ -23,6 +20,7 @@ client.on('ready' , () =>{
     console.log('online');   
 });
 
+/*
 for(let i = 0; i < data.websites.length; i++)
 {
     const perWeb = data.websites[i].website
@@ -40,25 +38,66 @@ for(let i = 0; i < data.websites.length; i++)
                 if((json.products[k].title).toLowerCase().includes(filtered_keywords[j]))
                 {
                     //foundItems.push("[" + (json.products[k].title) + "](" + (`${perWeb}/products/`) + (json.products[k].handle) + ")"); embed form
-                    if (foundItems.includes(json.products[k].title)) { return; }
-                    else { foundItems.push((json.products[k].title)); }
+                    if (foundItems.includes(json.products[k].title)) 
+                    { 
+                        return; 
+                    }
+                    else 
+                    { 
+                        foundItems.push((json.products[k].title)); 
+                    }
                 }
             }
         }
     })
     .catch(() => console.log(`error parsing ` + perWeb));
 };
-// console.log(user_keywords);
-// console.log(foundItems);
+*/
 
 client.on('messageCreate', (message) => {
+
+    var items = [];
+
     if (message.author.bot)
     {
         return;
-    }        
-    if (message.content == "ok")
-    {
-        message.reply(foundItems.join("\n"));
+    }
+
+    const prefix = "!add ";
+    const args = message.content.slice(prefix.length).trim().split(/ + /g);
+    const command = args.shift().toLowerCase();
+    let findThis = command;
+    if (message.content.startsWith(prefix + `${findThis}`)) {
+
+        for(let i = 0; i < data.websites.length; i++)
+        {
+            const perWeb = data.websites[i].website
+
+            let settings = { method: "Get" };
+            let url = `${perWeb}/products.json`
+
+            fetch(url, settings)
+            .then(res => res.json())
+            .then((json) => {
+                for(let k = 0; k < json.products.length; k++)
+                {
+                    if((json.products[k].title).toLowerCase().includes(findThis))
+                    {
+                        //foundItems.push("[" + (json.products[k].title) + "](" + (`${perWeb}/products/`) + (json.products[k].handle) + ")"); embed form
+                        items.push(json.products[k].title)
+                    }
+                }
+                fs.writeFile('data.txt', '', function(){console.log('done')})
+                fs.writeFileSync("data.txt", items.join("\n"));
+            }).catch(() => console.log(`error parsing ` + perWeb));
+            
+        };
+    }
+    if (message.content == "post")
+    {        
+        message.channel.send({ 
+            files: ['./data.txt']
+        });
     }
 });
 
