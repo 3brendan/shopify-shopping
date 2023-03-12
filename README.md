@@ -1,7 +1,28 @@
-# shopify-shopping
+# Shopify Shopping
 
-to-do:
+Use the commands below to filter through items. A fresh slate of keywords is used every time the !add command is ran. Post to display the items.
+```
+!add *keyword*  
+post
+```
 
-- allow user to filter by keywords
-- display via embeds
-- proxy integration
+## To-do List
+
+- Add multilple keyword recognition
+- Add proxy integration to prevent rate limits
+- Run more test-cases for error handling
+
+## Deployment
+
+To deploy this project, install the required modules
+
+```bash
+  npm i discord.js
+  npm i node-fetch
+  npm i dotenv
+```
+Create a .env file and replace with your bot token
+
+```env
+TOKEN = your_bot_token
+```
