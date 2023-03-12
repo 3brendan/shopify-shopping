@@ -39,7 +39,7 @@ for(let i = 0; i < data.websites.length; i++)
             {
                 if((json.products[k].title).toLowerCase().includes(filtered_keywords))
                 {
-                    foundItems.push(json.products[k].title);
+                    foundItems.push("[" + (json.products[k].title) + "](" + (`${perWeb}/products/`) + (json.products[k].handle) + ")");
                 }
             }
         }
@@ -51,7 +51,7 @@ client.on('messageCreate', (message) => {
     if (message.author.bot)
     {
         return;
-    }
+    }        
     if (message.content == "ok")
     {
         const exampleEmbed = new EmbedBuilder()
@@ -64,6 +64,20 @@ client.on('messageCreate', (message) => {
         // message.reply(foundItems.join("\n"));
         message.reply({embeds: [exampleEmbed]});
     }
+});
+
+client.on('messageCreate', (message) => {
+
+    const prefix = "!add ";
+    const args = message.content.slice(prefix.length).trim().split(/ + /g);
+    const command = args.shift().toLowerCase();
+    let shopifylink = command;
+    if (message.content.startsWith(prefix + `${shopifylink}`)) {
+
+        user_keywords.push(`${shopifylink}`)
+
+    }
+    console.log(user_keywords);
 });
 
 client.login(process.env.TOKEN);

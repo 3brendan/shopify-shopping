@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/3brendan/shopify-shopping#readme",
   "dependencies": {
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
     "node-fetch": "^2.6.9"
   }
 }
