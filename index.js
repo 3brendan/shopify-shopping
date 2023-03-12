@@ -6,8 +6,8 @@ require('dotenv').config();
 var sitelist = fs.readFileSync('/Users/brendan/Desktop/shopify-shopping/sites.json');
 const data = JSON.parse(sitelist);
 
-var user_keywords = ['jacques']; // Keywords separated by a comma, i.e. ['pants', 'shoes']
-var foundItems = []; // Don't touch
+var user_keywords = ['jacques', 'CHUCK','cement'];
+var foundItems = [];
 const filtered_keywords = user_keywords.map(keyword => keyword.toLowerCase());
 
 const client = new Client({
@@ -35,17 +35,21 @@ for(let i = 0; i < data.websites.length; i++)
     .then((json) => {
         for(let k = 0; k < json.products.length; k++)
         {
-            for(let j = 0; j < filtered_keywords.length; j++)
+            for(let j = 0; j < user_keywords.length; j++)
             {
-                if((json.products[k].title).toLowerCase().includes(filtered_keywords))
+                if((json.products[k].title).toLowerCase().includes(filtered_keywords[j]))
                 {
-                    foundItems.push("[" + (json.products[k].title) + "](" + (`${perWeb}/products/`) + (json.products[k].handle) + ")");
+                    //foundItems.push("[" + (json.products[k].title) + "](" + (`${perWeb}/products/`) + (json.products[k].handle) + ")"); embed form
+                    if (foundItems.includes(json.products[k].title)) { return; }
+                    else { foundItems.push((json.products[k].title)); }
                 }
             }
         }
     })
     .catch(() => console.log(`error parsing ` + perWeb));
 };
+// console.log(user_keywords);
+// console.log(foundItems);
 
 client.on('messageCreate', (message) => {
     if (message.author.bot)
@@ -54,15 +58,7 @@ client.on('messageCreate', (message) => {
     }        
     if (message.content == "ok")
     {
-        const exampleEmbed = new EmbedBuilder()
-            .setColor('#36393F')
-            .setTitle(`Keywords: ` + user_keywords)
-            .setURL('https://github.com/3brendan')
-            .addFields({ name: 'List of items', value: foundItems.join("\n") })
-            .setTimestamp()
-            .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
-        // message.reply(foundItems.join("\n"));
-        message.reply({embeds: [exampleEmbed]});
+        message.reply(foundItems.join("\n"));
     }
 });
 
