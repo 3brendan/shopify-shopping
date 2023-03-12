@@ -20,40 +20,6 @@ client.on('ready' , () =>{
     console.log('online');   
 });
 
-/*
-for(let i = 0; i < data.websites.length; i++)
-{
-    const perWeb = data.websites[i].website
-
-    let settings = { method: "Get" };
-    let url = `${perWeb}/products.json`
-
-    fetch(url, settings)
-    .then(res => res.json())
-    .then((json) => {
-        for(let k = 0; k < json.products.length; k++)
-        {
-            for(let j = 0; j < user_keywords.length; j++)
-            {
-                if((json.products[k].title).toLowerCase().includes(filtered_keywords[j]))
-                {
-                    //foundItems.push("[" + (json.products[k].title) + "](" + (`${perWeb}/products/`) + (json.products[k].handle) + ")"); embed form
-                    if (foundItems.includes(json.products[k].title)) 
-                    { 
-                        return; 
-                    }
-                    else 
-                    { 
-                        foundItems.push((json.products[k].title)); 
-                    }
-                }
-            }
-        }
-    })
-    .catch(() => console.log(`error parsing ` + perWeb));
-};
-*/
-
 client.on('messageCreate', (message) => {
 
     var items = [];
