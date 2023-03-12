@@ -32,6 +32,83 @@
         { 
             "name": "Shoe Palace", 
             "website": "https://www.shoepalace.com"
+        },
+        { 
+            "name": "Burnrubbersneakers", 
+            "website": "https://burnrubbersneakers.com/"
+        },
+        { 
+            "name": "Stussy", 
+            "website": "https://www.stussy.com/"
+        },
+        { 
+            "name": "Noirfonce", 
+            "website": "https://noirfonce.eu/"
+        },
+        { 
+            "name": "A Ma Maniere", 
+            "website": "https://www.a-ma-maniere.com/"
+        },
+        { 
+            "name": "Haven", 
+            "website": "https://shop.havenshop.com/"
+        },
+        { 
+            "name": "Union Los Angeles", 
+            "website": "https://store.unionlosangeles.com/"
+        },
+        { 
+            "name": "Private Sneakers", 
+            "website": "https://privatesneakers.com/"
+        },
+        { 
+            "name": "Kaws One", 
+            "website": "https://kawsone.com/"
+        },
+        { 
+            "name": "NRML", 
+            "website": "https://nrml.ca/"
+        },
+        { 
+            "name": "Hlorenzo", 
+            "website": "https://hlorenzo.com/"
+        },
+        { 
+            "name": "Sneaker Politics", 
+            "website": "https://sneakerpolitics.com/"
+        },
+        { 
+            "name": "DTLR", 
+            "website": "https://www.dtlr.com/"
+        },
+        { 
+            "name": "Wish ATL", 
+            "website": "https://wishatl.com/"
+        },
+        { 
+            "name": "Xhibition", 
+            "website": "https://www.xhibition.co/"
+        },
+        { 
+            "name": "Saint Alfred", 
+            "website": "https://www.saintalfred.com/"
+        },
+        { 
+            "name": "Jimmy Jazz", 
+            "website": "https://www.jimmyjazz.com/"
+        },
+        { 
+            "name": "Tops & Bottoms", 
+            "website": "https://www.topsandbottomsusa.com/"
+        },
+        { 
+            "name": "APB Store", 
+            "website": "https://www.apbstore.com/"
+        },
+        { 
+            "name": "Fear of God", 
+            "website": "https://fearofgod.com/"
         }
+
     ]
 }
