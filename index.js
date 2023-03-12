@@ -1,4 +1,4 @@
-const { Client, IntentsBitField, messageLink} = require('discord.js');
+const { Client, IntentsBitField, messageLink, EmbedBuilder } = require('discord.js');
 const fetch = require('node-fetch')
 const fs = require('fs');
 require('dotenv').config();
@@ -54,7 +54,15 @@ client.on('messageCreate', (message) => {
     }
     if (message.content == "ok")
     {
-        message.reply(foundItems.join("\n"));
+        const exampleEmbed = new EmbedBuilder()
+            .setColor('#36393F')
+            .setTitle(`Keywords: ` + user_keywords)
+            .setURL('https://github.com/3brendan')
+            .addFields({ name: 'List of items', value: foundItems.join("\n") })
+            .setTimestamp()
+            .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
+        // message.reply(foundItems.join("\n"));
+        message.reply({embeds: [exampleEmbed]});
     }
 });
 
