@@ -66,18 +66,4 @@ client.on('messageCreate', (message) => {
     }
 });
 
-client.on('messageCreate', (message) => {
-
-    const prefix = "!add ";
-    const args = message.content.slice(prefix.length).trim().split(/ + /g);
-    const command = args.shift().toLowerCase();
-    let shopifylink = command;
-    if (message.content.startsWith(prefix + `${shopifylink}`)) {
-
-        user_keywords.push(`${shopifylink}`)
-
-    }
-    console.log(user_keywords);
-});
-
 client.login(process.env.TOKEN);
