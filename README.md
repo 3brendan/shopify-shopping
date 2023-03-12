@@ -11,7 +11,8 @@ post
 - Add multilple keyword recognition
 - Add proxy integration to prevent rate limits
 - Run more test-cases for error handling
-
+- Rework the text file to include links to items
+- If items list is less than a certain amount, send via discord embed
 ## Deployment
 
 To deploy this project, install the required modules
@@ -26,3 +27,5 @@ Create a .env file and replace with your bot token
 ```env
 TOKEN = your_bot_token
 ```
+
+![App Screenshot](https://cdn.discordapp.com/attachments/907509097488863293/1084529854663381085/Screenshot_2023-03-12_at_1.33.57_PM.png)
