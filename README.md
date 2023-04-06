@@ -18,7 +18,7 @@ Create a **.env** file and replace with your bot token.
 TOKEN = your_bot_token
 ```
 
-Open the **slashcommand.js** file, and the required variables. You only need to run this program once.
+Open the **slashcommand.js** file, and the fill in the required variables. You only need to run this program once.
 ```
 node slashcommand.js
 ```
