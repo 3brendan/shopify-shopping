@@ -1,18 +1,7 @@
 # Shopify Shopping
 
-Use the commands below to filter through items. A fresh slate of keywords is used every time the !add command is ran. Post to display the items.
-```
-!add *keyword*  
-post
-```
+The Discord Shopping bot is a chatbot designed to help users shop online by automatically fetching items that match their search keywords from different e-commerce websites that are built on Shopify. The bot is integrated within a Discord server and used in a group setting, where users can search for items and share their findings with friends in real-time.
 
-## To-do List
-
-- Add multilple keyword recognition
-- Add proxy integration to prevent rate limits
-- Run more test-cases for error handling
-- Rework the text file to include links to items
-- If items list is less than a certain amount, send via discord embed
 ## Deployment
 
 To deploy this project, install the required modules
@@ -20,12 +9,30 @@ To deploy this project, install the required modules
 ```bash
   npm i discord.js
   npm i node-fetch
+  npm i fs
   npm i dotenv
 ```
-Create a .env file and replace with your bot token
 
+Create a **.env** file and replace with your bot token.
 ```env
 TOKEN = your_bot_token
 ```
 
-![App Screenshot](https://cdn.discordapp.com/attachments/907509097488863293/1084529854663381085/Screenshot_2023-03-12_at_1.33.57_PM.png)
+Open the **slashcommand.js** file, and the required variables. You only need to run this program once.
+```
+node slashcommand.js
+```
+
+Open the **index.js** file, and edit the "sitelist" variable so it follows your personal directory properly.
+Once edited, you may run using the command below.
+```
+var sitelist = fs.readFileSync('/Users/brendan/path_to_the_file/sites.json');
+node index.js
+```
+
+The command to search for items is below. Only 1 keyword is required, others are optional.
+```
+/search keyword1 keyword2 keyword3
+```
+
+![App Screenshot](https://cdn.discordapp.com/attachments/1089445587759403098/1093339563356848188/Screenshot_2023-04-05_at_9.00.55_PM.png)
