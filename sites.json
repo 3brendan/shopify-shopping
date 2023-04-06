@@ -108,7 +108,94 @@
         { 
             "name": "Fear of God", 
             "website": "https://fearofgod.com/"
+        },
+        {
+            "name": "Extra Butter",
+            "website": "https://extrabutterny.com"
+        },
+        {
+            "name": "Livestock",
+            "website": "https://www.deadstock.ca"
+        },
+        {
+            "name": "Notre",
+            "website": "https://www.notre-shop.com"
+        },
+        {
+            "name": "Blends",
+            "website": "https://www.blendsus.com"
+        },
+        {
+            "name": "Ronin",
+            "website": "https://www.ronindivision.com"
+        },
+        {
+            "name": "Solestop",
+            "website": "https://www.solestop.com"
+        },
+        {
+            "name": "Proper",
+            "website": "https://www.properlbc.com"
+        },
+        {
+            "name": "Ubiq",
+            "website": "https://www.ubiqlife.com"
+        },
+        {
+            "name": "Lapstone & Hammer",
+            "website": "https://www.lapstoneandhammer.com"
+        },
+        {
+            "name": "Rock City Kicks",
+            "website": "https://www.rockcitykicks.com"
+        },
+        {
+            "name": "MACHUS",
+            "website": "https://www.machusonline.com"
+        },
+        {
+            "name": "Capsule",
+            "website": "https://www.capsuletoronto.com"
+        },
+        {
+            "name": "Sole Classics",
+            "website": "https://www.soleclassics.com"
+        },
+        {
+            "name": "Packer Shoes",
+            "website": "https://www.packershoes.com"
+        },
+        {
+            "name": "RSVP Gallery",
+            "website": "https://www.rsvpgallery.com"
+        },
+        {
+            "name": "Renarts",
+            "website": "https://renarts.com"
+        },
+        {
+            "name": "Off The Hook",
+            "website": "https://www.offthehook.ca"
+        },
+        {
+            "name": "Feature",
+            "website": "https://feature.com"
+        },
+        {
+            "name": "Premier",
+            "website": "https://www.thepremierstore.com"
+        },
+        {
+            "name": "Caliroots",
+            "website": "https://www.caliroots.com"
+        },
+        {
+            "name": "Up There Store",
+            "website": "https://www.uptherestore.com"
+        },
+        {
+            "name": "Alumni",
+            "website": "https://www.alumniofny.com"
         }
-
     ]
 }
