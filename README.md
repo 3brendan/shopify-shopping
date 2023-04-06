@@ -8,7 +8,7 @@ To deploy this project, install the required modules
 
 ```bash
   npm i discord.js
-  npm i node-fetch
+  npm i node-fetch@2
   npm i fs
   npm i dotenv
 ```
