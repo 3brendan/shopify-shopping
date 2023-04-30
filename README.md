@@ -6,15 +6,15 @@ The Discord Shopping bot is a chatbot designed to help users shop online by auto
 
 To deploy this project, install the required modules
 
-```bash
-  npm i discord.js
-  npm i node-fetch@2
-  npm i fs
-  npm i dotenv
+```
+npm i discord.js
+npm i node-fetch@2
+npm i fs
+npm i dotenv
 ```
 
 Create a **.env** file and replace with your bot token.
-```env
+```
 TOKEN = your_bot_token
 ```
 
@@ -35,4 +35,4 @@ The command to search for items is below. Only 1 keyword is required, others are
 /search keyword1 keyword2 keyword3
 ```
 
-![App Screenshot](https://cdn.discordapp.com/attachments/1089445587759403098/1093339563356848188/Screenshot_2023-04-05_at_9.00.55_PM.png)
+![App Screenshot](https://cdn.discordapp.com/attachments/1102372755187445860/1102372824326348840/shopping.png)
